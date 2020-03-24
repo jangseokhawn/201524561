@@ -1,0 +1,47 @@
+스마트 그리드(smart grid)
+- 전기의 생산, 운반, 소비 과정 + 정보통신기술 / 지능형 전력망시스템 / 생산자 소비자 양방향 실시간 정보교환
+- 목표 >> 에너지절감, 전기품질향상 and 다른사업과연계
+
+zigbee
+- 개인통신망
+- IEEE 802.15 표준기반
+- 메시 네트워크
+
+기존원격검침 = PLC + 지그비
+한계 : 열악한환경에서 높은 링크마진특성 얻기어려움 / 원거리실외환경에서 한계
+
+NAN + HAN = SUN(Smart Utility Network) = IEEE 802.15.4.g = TG4g = 물리계층+MAC표준 = 무선전송기술 표준
+기존 : FSK, DSSS, OFDM >> MR-FSK, MR-OFDM, MR-OQPSK 제공
+
+1. MR-FSK
+-전송속도는 낮지만 응용서비스에 즉시 사용가능 >> 가장선호
+-매우간단한구조(심볼매핑+FSK변조
+2. MR-OFDM
+-phy헤더는 가장 낮은 MCS모드 이용 Scrambler사용x
+-MCS0~3은 Convolutional encoder사용 >> Puncturer 사용x
+-subcarrier간격 고정
+3. MR-OQPSK
+-DSSS, MDSSS선책가능
+-FEC+interleaving
+
+활용방안
+1. 홈네트워크 >> 에너지절감(재분배), 이산화탄소배출감소 전기요금 절약
+2. 센서네트워크 >> 안전진단, 비상상황발생시 실시간 통보 >> 비용절감, 실시간 대처
+
+
+
+
+응용   		FTP, HTTP
+트렌스포트 	TCP, UDP
+네트워크(인터넷)	IP(라우터)
+링크  		스위치, 브릿지 (MAC)
+물리 
+
+대역폭: 초당 전송될 수 있는 최대량 / 최고주파수-최저주파수
+
+질문:
+LLC
+링크마진
+코딩율
+PSDU
+PHR
