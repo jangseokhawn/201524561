@@ -1,0 +1,22 @@
+저속도 무선 개인 통신망(Low Rate Wireless Personal Area Networks, LR-WPANs)
+1계층(물리), 2계층(데이터링크,MAC)을 정의하는 표준
+
+1. 노드 두개 생성(n0, n1)
+2. LR-WPAN디바이스 두개 생성 (dev0, dev1)
+3. 각각의 디바이스에 맥 주소 설정(16비트인가 64비트인가 따라 나뉨)
+4. 체널생성 << *log-distance loss model, *porpagation speed delay model 설정
+5. dev0, dev1 모두 같은 채널에 연결
+6. 각각의 디바이스를 노드에 연결
+7. phy주소가 변경되면 콜백
+8. mobility model 생성 >> dev0은 0,0,0, dev1은 0,10,0위치와 연결
+9. 4개의 콜백함수 생성. 각각의 디바이스에 *confirm callback, *indication callback두개씩 설정
+10. pcap(패킷캡쳐) - 네트워크 트래픽 포착 >> 아스키 코드로 저장
+11. 패킷생성(50byte짜리) > dev1으로 전송
+패킷생성(60byte짜리) > dev2로 전송
+scheduleWithContext???
+
+
+*log-distance loss model = 거리에따라 수신되는 평균 signal power가 log적으로 감소
+*constant speed propagation delay = 거리에비례, 속도에 반비례
+*confirm callback = 데이터 전송 요청시
+*indication callback = 데이터 패킷이 들어올때
