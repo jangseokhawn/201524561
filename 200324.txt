@@ -34,13 +34,14 @@ NAN + HAN = SUN(Smart Utility Network) = IEEE 802.15.4.g = TG4g = 물리계층+M
 응용   		FTP, HTTP
 트렌스포트 	TCP, UDP
 네트워크(인터넷)	IP(라우터)
-링크  		스위치, 브릿지 (MAC)
+링크  		스위치, 브릿지 (MAC, LLC)
 물리 
+
+*LLC(Logical Link Control) 여러 다양한 MAC 부계층과 망계층(layer 3)간의 접속을 담당
 
 대역폭: 초당 전송될 수 있는 최대량 / 최고주파수-최저주파수
 
 질문:
-LLC
 링크마진
 코딩율
 PSDU
