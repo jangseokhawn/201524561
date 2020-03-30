@@ -1,0 +1,31 @@
+<<WIFI-Simple-adhoc>>
+802.11b 물리계층의 두개의 adhoc mode 노드가 1000바이트 패킷을 전송하는것
+RSS가 설정 값보다 낮아지면 패킷수신을 멈춤
+
+1. 물리계층 변조방식, *RSS, 패킷크기, 패킷수, 간격, verbose 설정
+2. 시간객체, *유니캐스트화
+3. 노드컨테이너에 두개의 노드생성
+4. YANS 물리계층설정 - RX gain, radioTap, Prism tracing??? 
+5. YANS 채널설정 - *Fixed Rss Loss Model, Speed Progagtion Delay Model
+6. wifi맥주소 추가, rate control 잠금
+7. 물리객체, MAC객체, wifi디바이스 생성(노드컨테이너에있는노드들)
+8. mobility모델 설정 -위치 설정 (0,0,0),(5,0,0), *인터넷스택 설정(노드컨테이너에 있는 노드들)
+9. 생선한 wifi디바이스에 ipv4할당
+10. UDP Socket Factory로 type Id 설정
+11. 첫번째 컨테이너노드로 'recvsink'소캣 생성, IP주소(0,0,0,0), 80포트설정
+12. 소켓의 엔드포인드를 설정한 ip주소, 포트번호로 바인딩, 콜백함수설정
+13. 두번째 컨테이너노드로 'source'소캣생성 , IP주소(255,255,255,255), 80포트설정
+14. 소켓을 ip주소, 포트번호에 연결
+15. pcap-네트워크트레픽포착
+16. 결과 출력
+17. schedule with context??
+
+*ad-hoc = 별도의 기반시설없이 무선통신 및 네트워킹 능력을 갖춘 두개 이상의 장비로 구성된 네트워크
+*dB = 데시벨, 상대적인 로그값, 데시벨이 두배 커지면 스칼라값은 10배커짐
+*dBm = 데시벨의 절대적인 전력량 기준 값, 1mW = 0dBm
+*rss = received signal strength 수신신호강도
+*verbose??
+*unicast = 고유주소로 하나의 네트워크 목적지에 1:1로 전송하는 방식
+*YANS = Yer Another Network Simulator
+*Fixed Rss Loss Model = 전송손실 고정, 사용자가 설정가능
+*internetStack = 인터넷스택에서 발생하는 event들의 pcap, ascii tracing 도와줌
