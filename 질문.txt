@@ -1,0 +1,15 @@
+LwM2M, Wi-SUN >> 무선, 저전력, 저자원
+단점 : 유선이나, TCP기반 기술에 비해 데이터 취득 신뢰성이 떨어짐
+
+OMA LWM2M( Open Mobile Alliance Lightweight M2M )
+- CoAP프로토콜 사용
+- 객체, 자원
+
+LPWAN ( Low-Power Wide Area Network )
+- 20km이상 멀리 보내야함, sub giga
+- LoRa, Wi-SUN
+
+
+
+노드 디바이스 채널  관계
+
